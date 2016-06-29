@@ -1,7 +1,9 @@
 from abc import ABCMeta, abstractmethod
 import time as tm
 
-class SortingAlgorithm(metaclass=ABCMeta):
+class ISortingAlgorithm():
+	__metaclass__ = ABCMeta
+
 	@abstractmethod
 	def sort(self, a_list):
 		pass
