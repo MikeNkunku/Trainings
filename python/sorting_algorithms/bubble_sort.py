@@ -1,6 +1,6 @@
-from sorting_algorithm import SortingAlgorithm as SA
+from isorting_algorithm import ISortingAlgorithm as ISA
 
-class BubbleSort(SA):
+class BubbleSort(ISA):
 	def sort(self, a_list):
 		exch = True
 
