@@ -2,7 +2,7 @@ import java.util.Scanner;
 import java.util.Arrays;
 import java.text.DecimalFormat;
 
-class TemperatureConvertor {
+public class TemperatureConvertor {
 	protected DecimalFormat df = new DecimalFormat("0.00");
 	protected double toKelvin = 273.15;
 	protected String celsiusUnit = "°C";
