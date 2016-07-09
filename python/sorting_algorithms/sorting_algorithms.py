@@ -1,7 +1,7 @@
 from abc import ABCMeta, abstractmethod
 import time as tm
 
-class ISortingAlgorithm():
+class SortingAlgorithm():
 	__metaclass__ = ABCMeta
 
 	@abstractmethod
