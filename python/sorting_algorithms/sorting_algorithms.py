@@ -71,3 +71,13 @@ class MergeSort(SortingAlgorithm):
 				a_list[p_t] = right_half[p_rh]
 				p_rh += 1
 				p_t += 1
+
+class SelectionSort(SortingAlgorithm):
+	def sort(self, a_list):
+		for i in range(len(a_list)-1):
+			idx_min = i
+			for j in range(i+1, len(a_list)-1, 1):
+				if a_list[j] < a_list[idx_min]:
+					idx_min = j
+
+			a_list[idx_min], a_list[i] = a_list[i], a_list[idx_min]
