@@ -15,6 +15,17 @@ class SortingAlgorithm():
 
 		return ("%.5f" % (end_time - start_time))
 
+class BubbleSort(SortingAlgorithm):
+	def sort(self, a_list):
+		exch = True
+
+		while (exch):
+			exch = False
+			for i in range(len(a_list) - 1):
+				if a_list[i] > a_list[i+1]:
+					exch = True
+					a_list[i], a_list[i+1] = a_list[i+1], a_list[i]
+
 class MergeSort(SortingAlgorithm):
 	def sort(self, a_list):
 		if (len(a_list) > 1):
