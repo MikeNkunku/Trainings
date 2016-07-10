@@ -79,9 +79,10 @@ public class SortingAlgorithms {
 		SortingAlgorithms sa = new SortingAlgorithms();
 		MergeSort ms = new MergeSort();
 		// ArrayList<int> al = new ArrayList<int>(Arrays.asList(1, 3));
+		int userChoice = 0;
 
-		// sa.displayMenu();
-		// int userChoice = sa.getUserChoice();
-		// System.out.println("userChoice: " + userChoice);
+		while (userChoice != sa.getOptions().get("Exit")) {
+			userChoice = sa.getUserChoice();
+		}
 	}
 }
