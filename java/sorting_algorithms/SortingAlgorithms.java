@@ -1,11 +1,14 @@
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.LinkedHashMap;
+import java.util.Collections;
+
+import java.util.Scanner;
 
 public class SortingAlgorithms {
 	private SortClass sc;
 	private ArrayList al;
-	private final LinkedHashMap<String, int> options = new LinkedHashMap<String, int>() {{
+	private final LinkedHashMap<String, Integer> options = new LinkedHashMap<String, Integer>() {{
 		put("Put list", 1);
 		put("Display list", 2);
 		put("Exit", 3);
@@ -44,7 +47,7 @@ public class SortingAlgorithms {
 		this.al = al;
 	}
 
-	public LinkedHashMap<String, int> getOptions() {
+	public LinkedHashMap<String, Integer> getOptions() {
 		return this.options;
 	}
 
@@ -53,24 +56,32 @@ public class SortingAlgorithms {
 	}
 
 	public void displayMenu() {
-		LinkedHashMap<String, int> ht = this.getOptions();
+		LinkedHashMap<String, Integer> ht = this.getOptions();
 
-		for(int key: ht.keySet()) {
+		for(String key: ht.keySet()) {
 			System.out.println(ht.get(key) + " - " + key);
 		}
 	}
 
-	// public int getUserChoice() {
-	// 	int userChoice = null;
+	public int getUserChoice() {
+		int userChoice = 0;
+		Scanner in = new Scanner(System.in);
 
+		while((userChoice < Collections.min(this.getOptions().values())) || (userChoice > Collections.max(this.getOptions().values()))) {
+			this.displayMenu();
+			userChoice = in.nextInt();
+		}
 
-	// }
+		return userChoice;
+	}
 
 	public static void main(String[] args) {
 		SortingAlgorithms sa = new SortingAlgorithms();
 		MergeSort ms = new MergeSort();
-		ArrayList<int> al = new ArrayList<int>(Arrays.asList(1, 3));
+		// ArrayList<int> al = new ArrayList<int>(Arrays.asList(1, 3));
 
-		sa.displayMenu();
+		// sa.displayMenu();
+		// int userChoice = sa.getUserChoice();
+		// System.out.println("userChoice: " + userChoice);
 	}
 }
