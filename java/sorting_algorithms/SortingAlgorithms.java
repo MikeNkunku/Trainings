@@ -5,10 +5,10 @@ import java.util.LinkedHashMap;
 public class SortingAlgorithms {
 	private SortClass sc;
 	private ArrayList al;
-	private final LinkedHashMap<int, String> options = new LinkedHashMap<int, String>() {{
-		put(1, "Put list");
-		put(2, "Display list");
-		put(3, "Exit");
+	private final LinkedHashMap<String, int> options = new LinkedHashMap<String, int>() {{
+		put("Put list", 1);
+		put("Display list", 2);
+		put("Exit", 3);
 	}};
 
 	public SortingAlgorithms(SortClass sc, ArrayList al) {
@@ -44,7 +44,7 @@ public class SortingAlgorithms {
 		this.al = al;
 	}
 
-	public LinkedHashMap<int, String> getOptions() {
+	public LinkedHashMap<String, int> getOptions() {
 		return this.options;
 	}
 
@@ -53,14 +53,18 @@ public class SortingAlgorithms {
 	}
 
 	public void displayMenu() {
-		LinkedHashMap<int, String> ht = this.getOptions();
+		LinkedHashMap<String, int> ht = this.getOptions();
 
 		for(int key: ht.keySet()) {
-			System.out.println(key + " - " + ht.get(key));
+			System.out.println(ht.get(key) + " - " + key);
 		}
 	}
 
-	public int 
+	// public int getUserChoice() {
+	// 	int userChoice = null;
+
+
+	// }
 
 	public static void main(String[] args) {
 		SortingAlgorithms sa = new SortingAlgorithms();
