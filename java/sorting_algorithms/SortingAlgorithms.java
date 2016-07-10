@@ -1,9 +1,15 @@
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.LinkedHashMap;
 
 public class SortingAlgorithms {
 	private SortClass sc;
 	private ArrayList al;
+	private LinkedHashMap<Integer, String> options = new LinkedHashMap<Integer, String>() {{
+		put(1, "Put list");
+		put(2, "Display list");
+		put(3, "Exit");
+	}};
 
 	public SortingAlgorithms(SortClass sc, ArrayList al) {
 		this.sc = sc;
@@ -38,8 +44,20 @@ public class SortingAlgorithms {
 		this.al = al;
 	}
 
+	public LinkedHashMap<Integer, String> getOptions() {
+		return this.options;
+	}
+
 	public void displayList() {
 		this.sc.display(this.al);
+	}
+
+	public void displayMenu() {
+		LinkedHashMap<Integer, String> ht = this.getOptions();
+
+		for(Integer key: ht.keySet()) {
+			System.out.println(key + " - " + ht.get(key));
+		}
 	}
 
 	public static void main(String[] args) {
@@ -47,9 +65,6 @@ public class SortingAlgorithms {
 		MergeSort ms = new MergeSort();
 		ArrayList<Integer> al = new ArrayList<Integer>(Arrays.asList(1, 3));
 
-		sa.setSortClass(ms);
-		sa.setList(al);
-
-		sa.displayList();
+		sa.displayMenu();
 	}
 }
