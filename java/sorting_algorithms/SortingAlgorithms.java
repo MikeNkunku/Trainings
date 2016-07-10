@@ -5,7 +5,7 @@ import java.util.LinkedHashMap;
 public class SortingAlgorithms {
 	private SortClass sc;
 	private ArrayList al;
-	private final LinkedHashMap<Integer, String> options = new LinkedHashMap<Integer, String>() {{
+	private final LinkedHashMap<int, String> options = new LinkedHashMap<int, String>() {{
 		put(1, "Put list");
 		put(2, "Display list");
 		put(3, "Exit");
@@ -44,7 +44,7 @@ public class SortingAlgorithms {
 		this.al = al;
 	}
 
-	public LinkedHashMap<Integer, String> getOptions() {
+	public LinkedHashMap<int, String> getOptions() {
 		return this.options;
 	}
 
@@ -53,17 +53,19 @@ public class SortingAlgorithms {
 	}
 
 	public void displayMenu() {
-		LinkedHashMap<Integer, String> ht = this.getOptions();
+		LinkedHashMap<int, String> ht = this.getOptions();
 
-		for(Integer key: ht.keySet()) {
+		for(int key: ht.keySet()) {
 			System.out.println(key + " - " + ht.get(key));
 		}
 	}
 
+	public int 
+
 	public static void main(String[] args) {
 		SortingAlgorithms sa = new SortingAlgorithms();
 		MergeSort ms = new MergeSort();
-		ArrayList<Integer> al = new ArrayList<Integer>(Arrays.asList(1, 3));
+		ArrayList<int> al = new ArrayList<int>(Arrays.asList(1, 3));
 
 		sa.displayMenu();
 	}
