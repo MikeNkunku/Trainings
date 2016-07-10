@@ -75,12 +75,28 @@ public class SortingAlgorithms {
 		return userChoice;
 	}
 
+	public void printStars(int nbStars) {
+		for (int i = 0; i < nbStars; i++) {
+			System.out.print('*');
+		}
+	}
+
+	public void printTitle() {
+		int nbStars = 15;
+
+		this.printStars(nbStars);
+		System.out.print(" Welcome to SortingAlgorithms! ");
+		this.printStars(nbStars);
+		System.out.println('\n');
+	}
+
 	public static void main(String[] args) {
 		SortingAlgorithms sa = new SortingAlgorithms();
 		MergeSort ms = new MergeSort();
 		// ArrayList<int> al = new ArrayList<int>(Arrays.asList(1, 3));
 		int userChoice = 0;
 
+		sa.printTitle();
 		while (userChoice != sa.getOptions().get("Exit")) {
 			userChoice = sa.getUserChoice();
 		}
