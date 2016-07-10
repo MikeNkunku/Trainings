@@ -5,7 +5,7 @@ import java.util.LinkedHashMap;
 public class SortingAlgorithms {
 	private SortClass sc;
 	private ArrayList al;
-	private LinkedHashMap<Integer, String> options = new LinkedHashMap<Integer, String>() {{
+	private final LinkedHashMap<Integer, String> options = new LinkedHashMap<Integer, String>() {{
 		put(1, "Put list");
 		put(2, "Display list");
 		put(3, "Exit");
