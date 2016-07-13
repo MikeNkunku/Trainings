@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 
 public class MergeSort extends SortClass {
-	public ArrayList sort(ArrayList al) {
+	public ArrayList<Double> sort(ArrayList<Double> al) {
 		return al;
 	}
 }
