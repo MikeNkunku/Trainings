@@ -5,7 +5,7 @@ public class SelectionSort extends SortClass {
 		int idx = 0;
 
 		for (int i = 0; i < al.size(); i++) {
-			idx = 1;
+			idx = i;
 			for (int j = i+1; j < al.size(); j++) {
 				if (al.get(j) < al.get(idx)) {
 					idx = j;
