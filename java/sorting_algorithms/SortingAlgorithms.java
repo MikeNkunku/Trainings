@@ -1,11 +1,9 @@
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.LinkedHashMap;
 import java.util.HashMap;
 import java.util.Collections;
 
 import java.util.Scanner;
-import java.util.regex.Pattern;
 
 public class SortingAlgorithms {
 	private SortClass sc;
